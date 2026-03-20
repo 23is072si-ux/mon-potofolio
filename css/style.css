@@ -14,7 +14,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #333;
+    background-color: #F8F8F8;
     font-family: roboto, sans-serif;
     line-height: 1.6;
 }
@@ -24,7 +24,7 @@ header{
     box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,4 +36,48 @@ header div a {
     font-size: 2.2rem;
     font-weight: bold;
     color: #6c63FF;
+}
+
+ul li {
+       list-style: none;
+       margin-left: 15px;
+}
+
+ul {
+    display: flex;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #2b2a2d;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 8px 0;
+}
+
+ul li a:hover {
+    color: #6c63FF;
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: #6c63FF;
+    transition: width 0.3s ease;
+}
+
+ul li a:hover::after {
+    width: 100%;
+}
+
+a.active: {
+    color:#6c63FF;
+}
+
+a.active::after {
+    width: 100%;
 }
